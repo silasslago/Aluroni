@@ -3,9 +3,12 @@ import styles from 'pages/Cardapio/cardapio.module.css'
 import { ReactComponent as Logo } from 'assets/logo.svg'
 import Buscador from './Buscador/buscador.jsx'
 import Filtros from './Filtros/filtros.jsx'
+import Ordenador from './Ordenador/ordenador.jsx'
 
 const Cardapio = () => {
     const [busca, setBusca] = useState("")
+    const [filtro, setFiltro] = useState(0)
+    const [order, setOrder] = useState("")
     return (
         <React.Fragment>
             <header>
@@ -28,8 +31,15 @@ const Cardapio = () => {
                 <section className='container'>
                     <h1 className='display-5'>Cardápio</h1>
                     <Buscador busca={busca} setBusca={setBusca} />
-                    <div className='mt-2'>
-                        <Filtros/>
+                    <div className='mt-2 d-flex justify-content-between'>
+                        <Filtros
+                            filtro={filtro}
+                            setFiltro={setFiltro}
+                        />
+                        <Ordenador 
+                            order={order}
+                            setOrder={setOrder}
+                        />
                     </div>
                 </section>
             </main>

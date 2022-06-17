@@ -1,14 +1,22 @@
 [
     {
         "id": 0,
-        "label": "Salgados"   
+        "label": "Todos"   
     },
     {
         "id": 1,
-        "label": "Pizzas"   
+        "label": "Massas"   
     },
     {
         "id": 2,
-        "label": "Doces"   
+        "label": "Carnes"   
+    },
+    {
+        "id": 3,
+        "label": "Combos"   
+    },
+    {
+        "id": 4,
+        "label": "Veganos"   
     }
 ]

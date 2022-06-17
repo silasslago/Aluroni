@@ -3,3 +3,8 @@
     font-weight: bold !important;
     width: 100px;
 }
+
+.btn-filter-selected {
+    background-color: #bb3232 !important;
+    color: white !important;
+}

@@ -6,6 +6,7 @@ const Buscador = ({ busca, setBusca }) => {
         <div className={styles['search-div']}>
             <input
                 className={styles['search-input']}
+                placeholder="Buscar..."
                 type="text"
                 value={busca} 
                 onChange={(target) => setBusca(target.value)}

@@ -1,10 +1,11 @@
 import filtros from './filtros.json'
 import styles from './filtros.module.css'
+import classNames from 'classnames'
 
-const Filtros = () => {
+const Filtros = ({ filtro, setFiltro }) => {
 
     const selectFilter = (filter) => {
-        console.log(filter)
+        setFiltro(filter.id)
     }
 
     return (
@@ -13,7 +14,10 @@ const Filtros = () => {
                 filtros.map((filter) => (
                     <button 
                         key={filter.id}
-                        className={`${styles['btn-filters-gray']} btn me-2`}
+                        className={`me-2 btn ${classNames({
+                            [styles['btn-filters-gray']]: true,
+                            [styles['btn-filter-selected']]: filter.id === filtro,
+                        })}`}
                         onClick={() => selectFilter(filter)}
                     >
                         { filter.label }
