@@ -1,0 +1,14 @@
+[
+    {
+        "id": 0,
+        "label": "Salgados"   
+    },
+    {
+        "id": 1,
+        "label": "Pizzas"   
+    },
+    {
+        "id": 2,
+        "label": "Doces"   
+    }
+]
