@@ -14,7 +14,7 @@ const Filtros = ({ filtro, setFiltro }) => {
                 filtros.map((filter) => (
                     <button 
                         key={filter.id}
-                        className={`me-2 btn ${classNames({
+                        className={`me-2 mb-2 btn ${classNames({
                             [styles['btn-filters-gray']]: true,
                             [styles['btn-filter-selected']]: filter.id === filtro,
                         })}`}

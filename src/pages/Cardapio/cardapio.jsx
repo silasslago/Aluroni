@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from 'assets/logo.svg'
 import Buscador from './Buscador/buscador.jsx'
 import Filtros from './Filtros/filtros.jsx'
 import Ordenador from './Ordenador/ordenador.jsx'
+import Itens from './Itens/itens.jsx'
 
 const Cardapio = () => {
     const [busca, setBusca] = useState("")
@@ -31,15 +32,20 @@ const Cardapio = () => {
                 <section className='container'>
                     <h1 className='display-5'>Cardápio</h1>
                     <Buscador busca={busca} setBusca={setBusca} />
-                    <div className='mt-2 d-flex justify-content-between'>
-                        <Filtros
-                            filtro={filtro}
-                            setFiltro={setFiltro}
-                        />
+                    <div className='mt-2 d-block d-md-flex justify-content-between'>
+                        <div className='mb-3'>
+                            <Filtros
+                                filtro={filtro}
+                                setFiltro={setFiltro}
+                            />
+                        </div>
                         <Ordenador 
                             order={order}
                             setOrder={setOrder}
                         />
+                    </div>
+                    <div className='mt-5'>
+                        <Itens />
                     </div>
                 </section>
             </main>
