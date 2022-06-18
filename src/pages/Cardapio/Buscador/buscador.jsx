@@ -9,7 +9,7 @@ const Buscador = ({ busca, setBusca }) => {
                 placeholder="Buscar..."
                 type="text"
                 value={busca} 
-                onChange={(target) => setBusca(target.value)}
+                onChange={(event) => setBusca(event.target.value)}
             />
             <CgSearch />
         </div>

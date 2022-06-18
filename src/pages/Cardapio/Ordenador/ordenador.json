@@ -4,15 +4,15 @@
         "value": ""
     },
     {
-        "nome": "Alfabetico",
-        "value": "alfabetico"
-    },
-    {
         "nome": "Preço",
         "value": "preco"
     },
     {
-        "nome": "Avaliação",
-        "value": "avaliacao"
+        "nome": "Qtd. Pessoas",
+        "value": "qtd_pessoas"
+    },
+    {
+        "nome": "Peso",
+        "value": "peso"
     }
 ]

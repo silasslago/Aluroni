@@ -39,13 +39,19 @@ const Cardapio = () => {
                                 setFiltro={setFiltro}
                             />
                         </div>
-                        <Ordenador 
-                            order={order}
-                            setOrder={setOrder}
-                        />
+                        <div>
+                            <Ordenador 
+                                order={order}
+                                setOrder={setOrder}
+                            />
+                        </div>
                     </div>
                     <div className='mt-5'>
-                        <Itens />
+                        <Itens
+                            busca={busca}
+                            filtro={filtro}
+                            order={order}
+                        />
                     </div>
                 </section>
             </main>
