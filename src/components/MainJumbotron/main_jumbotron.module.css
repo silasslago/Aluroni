@@ -1,0 +1,13 @@
+@import url('styles/_variaveis.css');
+.apresentation {
+    background-image: url('assets/apresentation-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+.apresentation-text {
+    color: #ffffff;
+    font-weight: normal;
+    width: 40%;
+}
