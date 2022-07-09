@@ -1,1 +1,20 @@
 @import url("styles/_variaveis.css");
+
+.house {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.adress {
+    border-radius: 5px;
+    color: white;
+    background-color: #853434;
+    font-size: 16px;
+    max-width: 250px;
+    text-align: center;
+    position: relative;
+    top: -30px;
+    left: calc(50% - 125px);
+    padding: 5px;
+}

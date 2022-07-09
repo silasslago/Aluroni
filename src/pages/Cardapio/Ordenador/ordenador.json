@@ -1,18 +1,18 @@
 [
-	{
-		"nome": "",
-		"value": ""
-	},
-	{
-		"nome": "Preço",
-		"value": "preco"
-	},
-	{
-		"nome": "Qtd. Pessoas",
-		"value": "qtd_pessoas"
-	},
-	{
-		"nome": "Peso",
-		"value": "peso"
-	}
+    {
+        "nome": "",
+        "value": ""
+    },
+    {
+        "nome": "Preço",
+        "value": "preco"
+    },
+    {
+        "nome": "Qtd. Pessoas",
+        "value": "qtd_pessoas"
+    },
+    {
+        "nome": "Peso",
+        "value": "peso"
+    }
 ]
