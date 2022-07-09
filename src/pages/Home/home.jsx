@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate()
 
     const showMoreDetails = (plate) => {
-        navigate(`/plate/${plate.id}`, {state: {...plate}, replace: false})
+        navigate(`/plate/${plate.id}`)
     }
 
     return (
@@ -54,10 +54,14 @@ const Home = () => {
             <section>
                 <h2 className="fw-bold">Nossa casa</h2>
                 <div>
-                    <img src={aluroniInside} alt="Imagem do restaurante aluroni" className={styles.house} />
+                    <img 
+                        src={aluroniInside} 
+                        alt="Imagem do restaurante aluroni" 
+                        className={styles.house} 
+                    />
                 </div>
                 <div className={styles.adress}>
-          Rua Rudolvado Oliveira, N 44 <br/> FSA - BA
+                    Rua Rudolvado Oliveira, N 44 <br/> FSA - BA
                 </div>
             </section>
         </section>

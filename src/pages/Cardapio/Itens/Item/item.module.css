@@ -1,24 +1,5 @@
-.price {
-    font-size: 1.3rem;
-}
-
-.item-category {
-    border-radius: 2px;
-    color: white;
-}
-
-.item-category-massas {
-    background-color: #e96e41;
-}
-
-.item-category-carnes {
-    background-color: #7c1818;
-}
-
-.item-category-combos {
-    background-color: #e4d234;
-}
-
-.item-category-veganos {
-    background-color: #678f2a;
+.item:hover {
+    cursor: pointer;
+    background-color: #dbdbdb;
+    border-radius: 5px;
 }

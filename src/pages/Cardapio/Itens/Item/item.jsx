@@ -1,49 +1,33 @@
 import classNames from "classnames"
+import PlateTags from "components/PlateTags/plate_tags"
 import { PropTypes } from "prop-types"
+import { useNavigate } from "react-router-dom"
 import styles from "./item.module.css"
 
-const Item = ({ title, description, photo, size, serving, price, category }) => {
+const Item = (plate) => {
+    const { id, title, description, photo } = plate
+    const navigate = useNavigate()
     return (
-        <div className='d-flex mb-5'>
-            <div className='me-3'>
+        <div onClick={() => navigate(`/plate/${id}`)} className={classNames({
+            "d-flex mb-2 p-3": true,
+            [styles.item]: true,
+        })}>
+            <div className="me-3">
                 <img src={photo} alt={title} />
             </div>
-            <div className='w-50'>
+            <div className="w-50">
                 <div>
-                    <h2 className='fw-bold'>{title}</h2>
-                    <p className='text-secondary'>{description}</p>
+                    <h2 className="fw-bold">{title}</h2>
+                    <p className="text-secondary">{description}</p>
                 </div>
-                <div className='row fw-bold'>
-                    <span className={classNames({
-                        "col-12": true,
-                        "col-md-3": true,
-                        [styles["item-category"]]: true,
-                        [styles[`item-category-${category.label.toLowerCase()}`]]: true
-                    })}>{category.label}</span>
-                    <span className='col-3 col-md-3'>{size}g</span>
-                    <span className='col-12 col-md-3'>Serve {serving} pessoa{serving === 1 ? "" : "s"}</span>
-                    <span className={classNames({
-                        "text-danger": true,
-                        "col-12": true,
-                        "col-md-3": true,
-                        [styles.price]: true
-                    })}>
-                        R${String(price.toFixed(2)).replace(".", ",")}
-                    </span>
-                </div>
+                <PlateTags {...plate} />
             </div>
         </div>
     )
 }
 
 Item.propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string,
-    photo: PropTypes.string,
-    size: PropTypes.number,
-    serving: PropTypes.number,
-    price: PropTypes.number,
-    category: PropTypes.object,
+    plate: PropTypes.object,
 }
 
 export default Item

@@ -18,8 +18,8 @@ const CurRoute = () => {
                         <Route index element={<Home/>}/>
                         <Route path="cardapio" element={<Cardapio/>}/>
                         <Route path="aboutus" element={<AboutUs/>}/>
-                        <Route path="plate/:id" element={<Plate/>} />
                     </Route>
+                    <Route path="/plate/:id" element={<Plate/>} />
                     <Route path="/*" element={<NotFound/>} />
                 </Routes>
                 <Footer />
