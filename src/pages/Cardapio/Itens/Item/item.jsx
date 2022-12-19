@@ -1,6 +1,7 @@
 import classNames from "classnames"
 import PlateTags from "components/PlateTags/plate_tags"
 import { PropTypes } from "prop-types"
+import { memo } from "react"
 import { useNavigate } from "react-router-dom"
 import styles from "./item.module.css"
 
@@ -29,5 +30,10 @@ const Item = (plate) => {
 Item.propTypes = {
     plate: PropTypes.object,
 }
-
-export default Item
+/*
+function propsEquals(prevProps, nextProps) {
+    console.log(prevProps, nextProps)
+    return true
+}
+*/
+export default memo(Item /*,  propsEquals */)

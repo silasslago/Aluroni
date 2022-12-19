@@ -1,15 +1,19 @@
 import { useParams, useNavigate, Routes, Route } from "react-router-dom" 
 import cardapio from "data/cardapio.json"
 import styles from "./plate.module.css"
-import PlateTags from "components/PlateTags/plate_tags"
-import NotFound from "pages/NotFound/not_found"
-import MainJumbotron from "components/MainJumbotron/main_jumbotron"
+import { lazy } from "react"
+
+const NotFound = lazy(() => import("pages/NotFound/not_found"))
+const PlateTags = lazy(() => import("components/PlateTags/plate_tags"))
+const MainJumbotron = lazy(() => import("components/MainJumbotron/main_jumbotron"))
 
 const Plate = () => {
+  
   const { id } = useParams()
   const navigate = useNavigate()
   const plate = cardapio.find((curPlate) => curPlate.id === Number(id))
   if(!plate) return <NotFound />
+
   return (
     <Routes>
       <Route path="*" element={<MainJumbotron />}>

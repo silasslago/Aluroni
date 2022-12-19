@@ -1,7 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Italiana&display=swap');
-@import url('styles/_variaveis.css');
-
-* {
-    font-family: var(--font-personalized), serif;
-    margin: 0px;
-}
